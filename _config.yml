@@ -5,11 +5,11 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-minimal_mistakes_skin    : "dirt" #"default" # "air", "contrast", "dark", "dirt", "mint", "sunrise"
+minimal_mistakes_skin    : "sunrise" #"default" # "air", "contrast", "dark", "dirt", "mint", "sunrise"
 
 # Site Settings
 locale                   : "en"
-title                    : "different posts layout????"
+title                    : "sunrise????"
 title_separator          : "-"
 name                     : "Your Name"
 description              : "An amazing website."
@@ -118,6 +118,7 @@ author:
 include:
   - .htaccess
   - _pages
+  - _layouts
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
