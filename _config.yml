@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "dirt" #"default" # "air", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "try the posts in docs again!!"
+title                    : "where is the css"
 title_separator          : "-"
 name                     : "Your Name"
 description              : "An amazing website."
@@ -119,6 +119,11 @@ include:
   - .htaccess
   - _pages
   - /docs
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Gruntfile.js
+  - gulpfile.js
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -127,15 +132,10 @@ exclude:
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
   - Capfile
   - CHANGELOG
   - config
   - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
   - LICENSE
   - log
   - node_modules
