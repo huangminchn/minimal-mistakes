@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "dirt" #"default" # "air", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "OMG"
+title                    : "finally!!"
 title_separator          : "-"
 name                     : "Your Name"
 description              : "An amazing website."
@@ -248,14 +248,14 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: #true
       share: true
       related: true
 
       defaults:
   # _posts
   - scope:
-      path: ""
+      path: "/_posts/2012-03-15-layout-header-image-horizontal.md"
       type: posts
     values:
       layout: single
