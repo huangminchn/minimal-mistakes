@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "dirt" #"default" # "air", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "where is the css"
+title                    : "different posts layout"
 title_separator          : "-"
 name                     : "Your Name"
 description              : "An amazing website."
@@ -118,12 +118,6 @@ author:
 include:
   - .htaccess
   - _pages
-  - /docs
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Gruntfile.js
-  - gulpfile.js
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -143,6 +137,12 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - /docs
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Gruntfile.js
+  - gulpfile.js
   #- /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
 keep_files:
@@ -247,6 +247,36 @@ defaults:
       type: posts
     values:
       layout: single
+      author_profile: true
+      read_time: true
+      comments: #true
+      share: true
+      related: true
+  - scope:
+      path: "/_posts/2009-05-15-edge-case-nested-and-mixed-lists.md"
+      type: posts
+    values:
+      layout: splash
+      author_profile: true
+      read_time: true
+      comments: #true
+      share: true
+      related: true
+  - scope:
+      path: "/_posts/2009-05-15-edge-case-nested-and-mixed-lists.md"
+      type: posts
+    values:
+      layout: home
+      author_profile: true
+      read_time: true
+      comments: #true
+      share: true
+      related: true
+  - scope:
+      path: "/_posts/2009-05-15-edge-case-nested-and-mixed-lists.md"
+      type: posts
+    values:
+      layout: default
       author_profile: true
       read_time: true
       comments: #true
