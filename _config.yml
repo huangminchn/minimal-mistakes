@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "dirt" #"default" # "air", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "different posts layout"
+title                    : "different posts layout????"
 title_separator          : "-"
 name                     : "Your Name"
 description              : "An amazing website."
@@ -246,37 +246,7 @@ defaults:
       path: "/_posts/2009-05-15-edge-case-nested-and-mixed-lists.md"
       type: posts
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: #true
-      share: true
-      related: true
-  - scope:
-      path: "/_posts/2009-05-15-edge-case-nested-and-mixed-lists.md"
-      type: posts
-    values:
       layout: splash
-      author_profile: true
-      read_time: true
-      comments: #true
-      share: true
-      related: true
-  - scope:
-      path: "/_posts/2009-05-15-edge-case-nested-and-mixed-lists.md"
-      type: posts
-    values:
-      layout: home
-      author_profile: true
-      read_time: true
-      comments: #true
-      share: true
-      related: true
-  - scope:
-      path: "/_posts/2009-05-15-edge-case-nested-and-mixed-lists.md"
-      type: posts
-    values:
-      layout: default
       author_profile: true
       read_time: true
       comments: #true
@@ -294,12 +264,22 @@ defaults:
       share: true
       related: true
   - scope:
-      path: "/docs/_posts/2012-01-03-layout-table-of-contents-post.md"
+      path: "/_posts/2012-03-15-layout-sidebar-nav-list.md"
       type: posts
     values:
-      layout: single
+      layout: default
       author_profile: true
       read_time: true
-      comments: #true
+      comments: true
+      share: true
+      related: true
+  - scope:
+      path: "/_posts/2012-03-15-layout-header-overlay-color.md"
+      type: posts
+    values:
+      layout: home
+      author_profile: true
+      read_time: true
+      comments: true
       share: true
       related: true
