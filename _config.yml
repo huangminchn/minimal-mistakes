@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "dirt" #"default" # "air", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "try the posts in docs!!"
+title                    : "try the posts in docs again!!"
 title_separator          : "-"
 name                     : "Your Name"
 description              : "An amazing website."
@@ -118,6 +118,7 @@ author:
 include:
   - .htaccess
   - _pages
+  - /docs
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -142,7 +143,7 @@ exclude:
   - Rakefile
   - README
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
+  #- /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
 keep_files:
   - .git
