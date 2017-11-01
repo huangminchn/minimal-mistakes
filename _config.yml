@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "dirt" #"default" # "air", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "Ye is awesome"
+title                    : "why"
 title_separator          : "-"
 name                     : "Your Name"
 description              : "An amazing website."
@@ -242,7 +242,7 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: "/_posts/"
+      path: "/2009-05-15-edge-case-nested-and-mixed-lists/"
       type: posts
     values:
       layout: single
