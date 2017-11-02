@@ -41,11 +41,35 @@ As for the constraints, as we’ve mentioned, updates to the shared weights limi
 
 We will use provided GHC GPU machines for the CUDA code, and we are managing to find starter code for serialized version of the configurable convolutional neural networks. If there isn’t any, we will have to implement our own version of serialized configurable CNNs from scratch. We also need to investigate into optimizations of the parallelism of neural networks and matrix multiplication, and we are working on it.
 
+# Goals and deliverables
+
+Here are our goals that we plan to achieve:
+1. Implement serialized configurable version of the convolutional neural networks as baseline in the experiments.
+2. Implement paralleled configurable version of the CNNs training system.
+3. Apply optimizations from reference papers to improve the parallel performance of the system.
+4. Design and implement specific domain language for users to define and train paralleled CNNs with simple operations.
+
 # Platform choice
 
 We believe CUDA is a good choice because we can utilize the thread blocks and shared/global memory of it, and the scales in CUDA make it easier to divide the problems in CNN. It makes sense for the workload because large number of threads in CUDA make it possible for let us parallel over training samples efficiently. We also choose c++ as the supporting language because it is compatible with CUDA.
 
+# Schedule
 
+| Week | Plan | Note |
+|:--------|:-------:|--------:|
+| Oct. 30   | Implement the Sequential version of CNN   | Proposal   |
+| Nov. 6   | Implement the simplest parallel version of CNN on CUDA   |    |
+|----
+| Nov. 13   | Optimize the parallel version   |    |
+| Nov. 20   | Gather training and test data   | Checkpoint   |
+|----
+| Nov. 27   | Benchmark   |    |
+| Dec. 4   | Optimize the parallel version according to the benchmark result   |    |
+|----
+| Dec. 12   | Prepare poster and complete final report   | Competition & Final Report   |
+|=====
+| Foot1   | Foot2   | Foot3
+{: rules="groups"}
 
 * Lists within lists do not break the ordered list numbering order
 * Your list styles go deep enough.
