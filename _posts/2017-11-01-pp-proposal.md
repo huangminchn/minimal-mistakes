@@ -8,7 +8,7 @@ tags:
   - cuda
 ---
 
-Summary
+# Summary
 
 We are going to implement and design the domain-specific language for the parallel version of the deep neural network (DNN) on CUDA so that users can use this language to define their own structure of the DNNs. We focus our application mainly on the convolutional networks that aim to solve computer vision related problems.
 
@@ -24,7 +24,7 @@ There are also various settings of the neural networks, such as using different 
 
 Most important of all, the computation convolutional neural network can benefit greatly from parallelism. Convolutional neural network is computation intensive, but by using shared weights, parallelizing over images or parameters, and trade atomicity with parallelism, large speedup can be expected via parallelism. 
 
-The Challenge
+# The Challenge
 The problem is challenging and might be difficult to parallelize for the following reasons:
 1. Training data is huge for computer vision problems, which are very typical applications of the convolutional neural networks. So parallelism and computation efficiency are very important to achieve a relatively good performance.
 2. Intensive matrix multiplication is required to train the neural network, therefore finding optimizations to do the matrix multiplication is important for this problem.
@@ -34,10 +34,10 @@ We hope to learn how to do tradeoffs between parallelism and absolute correctnes
 As for the workload, the dependencies are across different training iterations, and are within updates of the same weights. The memory access pattern would be of spatial locality. For convolutional matrix multiplication, it only requires a group of grids with locality, so it is for the pooling layer. 
 As for the constraints, as we’ve mentioned, updates to the shared weights limit parallelism, and input samples are trained batch by batch, therefore making the performance different from stochastic gradient descent, and we need to further investigate into this.
 
-Resources.
+# Resources.
 We will use provided GHC GPU machines for the CUDA code, and we are managing to find starter code for serialized version of the configurable convolutional neural networks. If there isn’t any, we will have to implement our own version of serialized configurable CNNs from scratch. We also need to investigate into optimizations of the parallelism of neural networks and matrix multiplication, and we are working on it.
 
-Platform choice.
+# Platform choice.
 We believe CUDA is a good choice because we can utilize the thread blocks and shared/global memory of it, and the scales in CUDA make it easier to divide the problems in CNN. It makes sense for the workload because large number of threads in CUDA make it possible for let us parallel over training samples efficiently. We also choose c++ as the supporting language because it is compatible with CUDA.
 
 
