@@ -12,6 +12,7 @@ tags:
 
 We are going to implement and design the domain-specific language for the parallel version of the deep neural network (DNN) on CUDA so that users can use this language to define their own structure of the DNNs. We focus our application mainly on the convolutional networks that aim to solve computer vision related problems.
 
+
 # Background
 
 Deep neural networks normally take very long time to train, and require large computation and memory overhead. And parallelizing the computation could be of great help to accelerate the training phase and leads to feasibility of more complex network structures. Specifically, we will mainly explore the parallelism on convolutional networks that uses expensive convolutional matrix multiplication to form training features. 
@@ -26,6 +27,7 @@ There are also various settings of the neural networks, such as using different 
 
 Most important of all, the computation convolutional neural network can benefit greatly from parallelism. Convolutional neural network is computation intensive, but by using shared weights, parallelizing over images or parameters, and trade atomicity with parallelism, large speedup can be expected via parallelism. 
 
+
 # The Challenge
 
 The problem is challenging and might be difficult to parallelize for the following reasons:
@@ -37,9 +39,11 @@ We hope to learn how to do tradeoffs between parallelism and absolute correctnes
 As for the workload, the dependencies are across different training iterations, and are within updates of the same weights. The memory access pattern would be of spatial locality. For convolutional matrix multiplication, it only requires a group of grids with locality, so it is for the pooling layer. 
 As for the constraints, as we’ve mentioned, updates to the shared weights limit parallelism, and input samples are trained batch by batch, therefore making the performance different from stochastic gradient descent, and we need to further investigate into this.
 
+
 # Resources
 
 We will use provided GHC GPU machines for the CUDA code, and we are managing to find starter code for serialized version of the configurable convolutional neural networks. If there isn’t any, we will have to implement our own version of serialized configurable CNNs from scratch. We also need to investigate into optimizations of the parallelism of neural networks and matrix multiplication, and we are working on it.
+
 
 # Goals and deliverables
 
@@ -48,6 +52,7 @@ Here are our goals that we plan to achieve:
 2. Implement paralleled configurable version of the CNNs training system.
 3. Apply optimizations from reference papers to improve the parallel performance of the system.
 4. Design and implement specific domain language for users to define and train paralleled CNNs with simple operations.
+
 
 # Platform choice
 
@@ -68,52 +73,4 @@ We believe CUDA is a good choice because we can utilize the thread blocks and sh
 |----
 | Dec. 12   | Prepare poster and complete final report   | Competition & Final Report   |
 |=====
-| Foot1   | Foot2   | Foot3
 {: rules="groups"}
-
-* Lists within lists do not break the ordered list numbering order
-* Your list styles go deep enough.
-
-### Ordered -- Unordered -- Ordered
-
-1. ordered item
-2. ordered item 
-  * **unordered**
-  * **unordered** 
-    1. ordered item
-    2. ordered item
-3. ordered item
-4. ordered item
-
-### Ordered -- Unordered -- Unordered
-
-1. ordered item
-2. ordered item 
-  * **unordered**
-  * **unordered** 
-    * unordered item
-    * unordered item
-3. ordered item
-4. ordered item
-
-### Unordered -- Ordered -- Unordered
-
-* unordered item
-* unordered item 
-  1. ordered
-  2. ordered 
-    * unordered item
-    * unordered item
-* unordered item
-* unordered item
-
-### Unordered -- Unordered -- Ordered
-
-* unordered item
-* unordered item 
-  * unordered
-  * unordered 
-    1. **ordered item**
-    2. **ordered item**
-* unordered item
-* unordered item
