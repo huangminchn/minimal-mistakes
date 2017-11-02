@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "sunrise" #"default" # "air", "contrast", "dark", "di
 
 # Site Settings
 locale                   : "en"
-title                    : "sunrise????"
+title                    : "how about this"
 title_separator          : "-"
 name                     : "Your Name"
 description              : "An amazing website."
@@ -244,7 +244,7 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: "/_posts/2009-05-15-edge-case-nested-and-mixed-lists.md"
+      path: ""
       type: posts
     values:
       layout: splash
@@ -253,34 +253,5 @@ defaults:
       comments: #true
       share: true
       related: true
-  # _posts
-  - scope:
-      path: "/_posts/2012-03-15-layout-header-image-horizontal.md"
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  - scope:
-      path: "/_posts/2012-03-15-layout-sidebar-nav-list.md"
-      type: posts
-    values:
-      layout: default
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  - scope:
-      path: "/_posts/2012-03-15-layout-header-overlay-color.md"
-      type: posts
-    values:
-      layout: home
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+      sidebar:
+        nav               : "docs"
