@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "sunrise" #"default" # "air", "contrast", "dark", "di
 
 # Site Settings
 locale                   : "en"
-title                    : "how about this"
+title                    : "the sidebar config is deleted"
 title_separator          : "-"
 name                     : "Your Name"
 description              : "An amazing website."
@@ -83,10 +83,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Team Know Nothing"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an amazing person."
-  location         : "Somewhere"
+  location         : "CMU"
   email            :
   uri              :
   bitbucket        :
@@ -253,5 +253,3 @@ defaults:
       comments: #true
       share: true
       related: true
-      sidebar:
-        nav               : "docs"
