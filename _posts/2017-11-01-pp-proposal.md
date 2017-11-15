@@ -10,7 +10,7 @@ tags:
 
 # Summary
 
-We are going to implement and design the <span style="color:red">general framework</span> for the parallel version of the <span style="color:red">deep convolutional neural network (CNN)</span> among many branches of the deep neural network (DNN) on CUDA so that users can use this language to <span style="color:red">specify</span> their own structure of the <span style="color:red">CNNs while having the network running in parallelism</span>. We focus our application mainly on the convolutional networks that aim to solve computer vision related problems.
+We are going to implement and design the general framework for the parallel version of the deep convolutional neural network (CNN) among many branches of the deep neural network (DNN) on CUDA so that users can use this language to specify their own structure of the CNNs while having the network running in parallelism. We focus our application mainly on the convolutional networks that aim to solve computer vision related problems.
 
 
 # Background
