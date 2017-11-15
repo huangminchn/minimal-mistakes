@@ -10,7 +10,7 @@ tags:
 
 # Summary
 
-We are going to implement and design the domain-specific language for the parallel version of the deep neural network (DNN) on CUDA so that users can use this language to define their own structure of the DNNs. We focus our application mainly on the convolutional networks that aim to solve computer vision related problems.
+We are going to implement and design the <span style="color:red">general framework</span> for the parallel version of the deep convolutional neural network (CNN) among many branches of the deep neural network (DNN) on CUDA so that users can use this language to specify their own structure of the CNNs while having the network running in parallelism. We focus our application mainly on the convolutional networks that aim to solve computer vision related problems.
 
 
 # Background
@@ -23,7 +23,7 @@ Convolutional layers apply a convolution operation to the input, passing the res
 Pooling layers are used to combine the outputs of a group of cells from previous layer into a single value. For example, max pooling uses the maximum value from each of a cluster of neurons at the prior layer. Another example is average pooling, which uses the average value from each of a cluster of neurons at the prior layer.
 3. Fully connected layers
 Fully connected layers connect every neuron in one layer to every neuron in another layer. It is in principle the same as the traditional multi-layer perceptron neural network
-There are also various settings of the neural networks, such as using different loss functions, using different activation functions, etc. We want to have a general convolutional neural networks that let users define which types the layers are and the parameters of each layer by using our domain-specific language.
+There are also various settings of the neural networks, such as using different loss functions, using different activation functions, etc. We want to have a general convolutional neural networks that let users define which types the layers are and the parameters of each layer by using our framework
 
 Most important of all, the computation convolutional neural network can benefit greatly from parallelism. Convolutional neural network is computation intensive, but by using shared weights, parallelizing over images or parameters, and trade atomicity with parallelism, large speedup can be expected via parallelism. 
 
@@ -42,7 +42,7 @@ As for the constraints, as we’ve mentioned, updates to the shared weights limi
 
 # Resources
 
-We will use provided GHC GPU machines for the CUDA code, and we are managing to find starter code for serialized version of the configurable convolutional neural networks. If there isn’t any, we will have to implement our own version of serialized configurable CNNs from scratch. We also need to investigate into optimizations of the parallelism of neural networks and matrix multiplication, and we are working on it.
+We will use provided GHC GPU machines for the CUDA code, and we are managing to find starter code for serialized version of the configurable convolutional neural networks. If there isn’t any, we will have to implement our own version of serialized configurable CNNs from scratch. We also need to investigate into optimizations of the parallelism of neural networks and matrix multiplication, and we are working on them.
 
 
 # Goals and deliverables
@@ -51,7 +51,7 @@ Here are our goals that we plan to achieve:
 1. Implement serialized configurable version of the convolutional neural networks as baseline in the experiments.
 2. Implement paralleled configurable version of the CNNs training system.
 3. Apply optimizations from reference papers to improve the parallel performance of the system.
-4. Design and implement specific domain language for users to define and train paralleled CNNs with simple operations.
+4. Design and implement framework for users to define and train paralleled CNNs with simple operations.
 
 
 # Platform choice
