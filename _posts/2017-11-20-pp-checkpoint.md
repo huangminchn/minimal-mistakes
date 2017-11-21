@@ -25,15 +25,15 @@ For the issues that concern us the most, we are concerned about the synchronized
 
 | Week | Plan | Note |
 |:--------|:-------:|--------:|
-| Oct. 30   | Implement the Sequential version of CNN   | Proposal   |
-| Nov. 6   | Implement the simplest parallel version of CNN on CUDA   |    |
+| Oct. 30   | Understand the CNN   | Proposal   |
+| Nov. 6   | Implement the simplest sequential version of CNN on CUDA   |    |
 |----
-| Nov. 13   | Optimize the parallel version   |    |
-| Nov. 20   | Gather training and test data   | Checkpoint   |
+| Nov. 13   | Design the framework that is friendly to users   |    |
+| Nov. 20   | Complement the framework for sequential CNN   | Checkpoint   |
 |----
-| Nov. 27   | Benchmark   |    |
-| Dec. 4   | Optimize the parallel version according to the benchmark result   |    |
+| Nov. 27   | Explore the performance boost from parallel over different layers (Ye); benchmark the sequential version (Min)   |    |
+| Dec. 4   | Profile the new framework that parallel over layers and find optimization(Ye); explore the performance boost from parallel over inputs (Min)   |    |
 |----
-| Dec. 12   | Prepare poster and complete final report   | Competition & Final Report   |
+| Dec. 12   | Prepare for the poster session (Ye); apply all optimizations found by Ye (Min)   | Competition & Final Report   |
 |=====
 {: rules="groups"}
