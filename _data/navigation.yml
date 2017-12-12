@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: "Github"
-    url: https://github.com/lacora/ParallelCNN-CUDA
+  # - title: "Github"
+  #   url: https://github.com/lacora/ParallelCNN-CUDA
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
